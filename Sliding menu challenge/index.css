@@ -1,0 +1,98 @@
+/* start styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=VT323&display=swap");
+
+body {
+  margin: 0;
+  background: #444;
+  font-family: "Poppins";
+  position: relative;
+  overflow-x: hidden;
+}
+li,
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+main {
+  padding: 140px 40px 40px;
+  color: #bbb;
+}
+
+/* solution styles */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #222;
+  z-index: 0;
+}
+
+.navbar h2 {
+  color: white;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.menu-icon.cross div:nth-child(1) {
+  transform: rotate(120deg) translate(1px,-2px);
+}
+
+.menu-icon.cross div:nth-child(2) {
+  transform: rotate(-120deg) translate(5px,5px);
+}
+
+.menu-icon.cross div:nth-child(3) {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.menu-icon div {
+  margin: 3px;
+  width: 40px;
+  height: 5px;
+  background-color: white;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #111;
+  width: 15%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.menu ul {
+  position: absolute;
+  top: 20%;
+}
+
+.menu ul li {
+  text-decoration: underline;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: larger;
+}
+
+.menu-on {
+  transform: translateX(0);
+}
